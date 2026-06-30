@@ -1,0 +1,133 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.login-form-header {
+  margin-bottom: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+.login-form-header h4 {
+  text-align: center;
+  width: 100%;
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.login-form-hint {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.login-error-alert {
+  margin-bottom: 0;
+}
+
+.login-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-submit-button {
+  height: 44px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  background: var(--color-primary) !important;
+  border: none !important;
+  transition: all 0.2s ease;
+  color: var(--color-text-on-primary) !important;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.login-submit-button:hover {
+  background: var(--color-primary-hover) !important;
+  color: var(--color-text-on-primary) !important;
+}
+
+.login-submit-button:active {
+  background: var(--color-primary-active) !important;
+}
+
+.login-submit-button:focus {
+  color: var(--color-text-on-primary) !important;
+}
+
+.login-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.login-link-button {
+  padding: 0;
+  height: auto;
+  font-size: 14px;
+  color: var(--color-primary-emphasis);
+  text-align: center;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.login-link-button:hover {
+  color: var(--color-primary);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .login-form {
+    gap: 20px;
+  }
+
+  .login-form-header h4 {
+    font-size: 16px;
+  }
+
+  .login-form-hint {
+    font-size: 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .login-form {
+    gap: 18px;
+  }
+
+  .login-form-header h4 {
+    font-size: 15px;
+  }
+
+  .login-form-hint {
+    font-size: 12px;
+  }
+
+  .login-form-fields {
+    gap: 16px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .login-form-header h4 {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,182 @@
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.register-form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.register-form-input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid var(--color-border-input);
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: inherit;
+  color: var(--color-text-primary);
+  background: var(--color-bg-input);
+  transition: all 0.2s;
+}
+
+.register-form-input--select {
+  cursor: pointer;
+}
+
+.register-form-input--error {
+  border-color: var(--color-error);
+}
+
+.register-form-input-wrap {
+  position: relative;
+}
+
+.register-form-toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--color-text-tertiary);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.register-form-server-error {
+  padding: 12px 16px;
+  background: var(--color-error-bg);
+  border: 1px solid var(--color-error);
+  border-radius: 6px;
+  color: var(--color-error);
+  font-size: 13px;
+  text-align: center;
+}
+
+.register-form-consent-block {
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+.register-form-consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.register-form-input--password {
+  padding-right: 45px;
+}
+
+.register-form-consent-label {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.register-form-consent-label--accepted {
+  background: var(--color-info-bg);
+}
+
+.register-form-consent-label--error {
+  border-color: var(--color-error);
+}
+
+.register-form-consent-checkbox {
+  margin-top: 3px;
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.register-form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.register-form-error {
+  font-size: 13px;
+  color: var(--color-error);
+  margin-top: 4px;
+  display: block;
+}
+
+.register-form-error--checkbox {
+  font-size: 12px;
+  margin-left: 26px;
+  display: block;
+}
+
+.register-form-error--checkbox-tight {
+  margin-top: -8px;
+  margin-bottom: 12px;
+}
+
+.register-form-error--checkbox-spaced {
+  margin-top: 4px;
+}
+
+.register-form-hint {
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+  margin-top: 4px;
+  display: block;
+}
+
+.register-form-consent-text {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.register-form-consent-link {
+  color: var(--color-text-link);
+  text-decoration: underline;
+}
+
+.register-form-btn-back {
+  flex: 1;
+  padding: 10px 16px;
+  background: transparent;
+  color: var(--color-text-tertiary);
+  border: 1px solid var(--color-border-input);
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.register-form-btn-submit {
+  flex: 2;
+  padding: 10px 16px;
+  background: var(--color-primary);
+  color: var(--color-text-on-primary);
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.register-form-btn-submit:disabled {
+  background: var(--color-disabled-bg);
+  cursor: not-allowed;
+}

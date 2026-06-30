@@ -42,9 +42,9 @@ Client exchanges code at `POST /oauth2/token` with PKCE `code_verifier`.
 
 ## Production
 
-- Static files served at `auth.taqseet.ru`
-- `/api/v1/*` proxied to `taqseet-auth` backend
-- See `deploy/nginx.conf` and `.github/workflows/deploy-auth-app.yml`
+- UI (static): `auth.taqseet.ru`
+- API + OIDC: `auth-api.taqseet.ru`
+- See `.github/workflows/deploy-auth-app.yml`
 
 ## Project structure notes
 

@@ -1,0 +1,32 @@
+.register-company-page .login-container {
+  max-width: 680px;
+}
+
+.register-company-page .login-card {
+  background: var(--color-bg-container);
+  border: 1px solid var(--color-primary-border-subtle);
+  box-shadow: var(--shadow-brand-sm);
+  border-radius: 18px;
+  padding: 28px 28px 24px;
+  height: auto;
+  max-height: none;
+  overflow: visible !important;
+}
+
+.register-company-page .login-form,
+.register-company-page .login-form-fields {
+  max-height: none;
+  overflow: visible !important;
+}
+
+@media (max-width: 767px) {
+  .register-company-page .login-container {
+    max-width: 100%;
+  }
+
+  .register-company-page .login-card {
+    padding: 22px 18px 18px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-brand-md);
+  }
+}
