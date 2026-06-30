@@ -42,9 +42,11 @@ Client exchanges code at `POST /oauth2/token` with PKCE `code_verifier`.
 
 ## Production
 
-- UI (static): `auth.taqseet.ru`
-- API + OIDC: `auth-api.taqseet.ru`
-- See `.github/workflows/deploy-auth-app.yml`
+- UI: `auth.taqseet.ru` (static files → `/var/www/auth`)
+- API + OIDC: `auth-api.taqseet.ru` (`taqseet-auth`)
+- Deploy: `.github/workflows/deploy-auth-app.yml`
+
+In dev, Vite proxies `/api`, `/oauth2`, `/.well-known` to `taqseet-auth` for same-origin cookies (`vite.config.ts`).
 
 ## Project structure notes
 
