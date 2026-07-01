@@ -22,24 +22,10 @@ const getEnvVar = (key: string, defaultValue?: string): string => {
   return value || defaultValue || ''
 }
 
-// Prod: API and OIDC issuer on the same origin as auth portal (nginx → taqseet-auth :8081).
-function resolveAuthApiUrl(): string {
-  if (import.meta.env.PROD && typeof window !== 'undefined') {
-    return `${window.location.origin}/api/v1`
-  }
-  return getEnvVar('VITE_AUTH_API_URL', '/api/v1')
-}
-
-function resolveOidcIssuer(): string {
-  if (import.meta.env.PROD && typeof window !== 'undefined') {
-    return window.location.origin
-  }
-  return getEnvVar('VITE_OIDC_ISSUER', 'http://localhost:8081')
-}
-
+// Auth API (taqseet-auth) — separate host from SSO portal UI in production.
 export const env: EnvConfig = {
-  authApiUrl: resolveAuthApiUrl(),
-  oidcIssuer: resolveOidcIssuer(),
+  authApiUrl: getEnvVar('VITE_AUTH_API_URL', '/api/v1'),
+  oidcIssuer: getEnvVar('VITE_OIDC_ISSUER', 'http://localhost:8081'),
   managerAppUrl: getEnvVar('VITE_MANAGER_APP_URL', 'http://localhost:3000'),
   adminAppUrl: getEnvVar('VITE_ADMIN_APP_URL', 'http://localhost:3002'),
   investAppUrl: getEnvVar('VITE_INVEST_APP_URL', 'http://localhost:3001'),
