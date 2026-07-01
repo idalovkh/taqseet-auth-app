@@ -6,3 +6,5 @@ dist
 *.local
 .env
 .env.local
+scripts/prod-secrets.env
+scripts/prod_ssh_key.pem
